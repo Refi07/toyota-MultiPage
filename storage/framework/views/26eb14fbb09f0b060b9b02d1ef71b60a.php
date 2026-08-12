@@ -1,6 +1,6 @@
-@extends('layouts.app')
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 <div class="bg-neutral-950 text-white min-h-screen antialiased relative overflow-hidden">
 
     <div class="absolute top-0 right-0 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -59,7 +59,7 @@
             <!-- Card Produk 1: All New Avanza -->
             <div class="bg-slate-900/40 border border-slate-800 rounded-xl overflow-hidden shadow-lg group hover:border-red-500/50 transition-all duration-300">
                 <div class="p-2 bg-slate-950 flex items-center justify-center min-h-[220px] overflow-hidden">
-                    <img src="{{ asset('images/avnza.jpg') }}" alt="Toyota Avanza" class="w-full h-[180px] object-contain transform group-hover:scale-105 transition-transform duration-300">
+                    <img src="<?php echo e(asset('images/avnza.jpg')); ?>" alt="Toyota Avanza" class="w-full h-[180px] object-contain transform group-hover:scale-105 transition-transform duration-300">
                 </div>
                 <div class="p-6">
                     <h3 class="text-lg font-bold group-hover:text-red-500 transition-colors">All New Avanza</h3>
@@ -71,7 +71,7 @@
             <!-- Card Produk 2: Kijang Innova Zenix -->
             <div class="bg-slate-900/40 border border-slate-800 rounded-xl overflow-hidden shadow-lg group hover:border-red-500/50 transition-all duration-300">
                 <div class="p-2 bg-slate-950 flex items-center justify-center min-h-[220px] overflow-hidden">
-                    <img src="{{ asset('images/kjg.webp') }}" alt="Toyota Kijang Innova Zenix" class="w-full h-[180px] object-contain transform group-hover:scale-105 transition-transform duration-300">
+                    <img src="<?php echo e(asset('images/kjg.webp')); ?>" alt="Toyota Kijang Innova Zenix" class="w-full h-[180px] object-contain transform group-hover:scale-105 transition-transform duration-300">
                 </div>
                 <div class="p-6">
                     <h3 class="text-lg font-bold group-hover:text-red-500 transition-colors">Kijang Innova Zenix</h3>
@@ -83,7 +83,7 @@
             <!-- Card Produk 3: Toyota Raize -->
             <div class="bg-slate-900/40 border border-slate-800 rounded-xl overflow-hidden shadow-lg group hover:border-red-500/50 transition-all duration-300">
                 <div class="p-2 bg-slate-950 flex items-center justify-center min-h-[220px] overflow-hidden">
-                    <img src="{{ asset('images/Toyota_Raize.jpg') }}" alt="Toyota Raize" class="w-full h-[180px] object-contain transform group-hover:scale-105 transition-transform duration-300">
+                    <img src="<?php echo e(asset('images/Toyota_Raize.jpg')); ?>" alt="Toyota Raize" class="w-full h-[180px] object-contain transform group-hover:scale-105 transition-transform duration-300">
                 </div>
                 <div class="p-6">
                     <h3 class="text-lg font-bold group-hover:text-red-500 transition-colors">Toyota Raize</h3>
@@ -146,4 +146,5 @@
     </div>
 
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\laragon\www\proyek-toyota\resources\views/toyota/index.blade.php ENDPATH**/ ?>

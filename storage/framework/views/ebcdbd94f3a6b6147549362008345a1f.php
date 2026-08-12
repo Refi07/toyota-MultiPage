@@ -3,14 +3,14 @@
         <div class="flex justify-between h-20">
             <!-- Logo Brand -->
             <div class="flex items-center">
-                <a href="{{ url('/') }}" class="text-2xl font-black tracking-wider uppercase font-display text-gray-900">
+                <a href="<?php echo e(url('/')); ?>" class="text-2xl font-black tracking-wider uppercase font-display text-gray-900">
                     SALES<span class="text-red-600">SURABAYA</span>
                 </a>
             </div>
 
             <!-- Menu Desktop -->
             <div class="hidden md:flex items-center space-x-8 font-medium text-sm tracking-wide uppercase">
-                <a href="{{ url('/toyota') }}" class="py-2 px-1 border-b-2 {{ Request::is('toyota') ? 'border-red-600 text-gray-900 font-bold' : 'border-transparent text-gray-500 hover:text-gray-900' }} transition">Toyota</a>
+                <a href="<?php echo e(url('/toyota')); ?>" class="py-2 px-1 border-b-2 <?php echo e(Request::is('toyota') ? 'border-red-600 text-gray-900 font-bold' : 'border-transparent text-gray-500 hover:text-gray-900'); ?> transition">Toyota</a>
                 <a href="#tentang-kami" class="text-gray-500 hover:text-gray-900 transition">Tentang Kami</a>
                 <a href="#produk" class="text-gray-500 hover:text-gray-900 transition">Produk</a>
                 <a href="#promo" class="text-gray-500 hover:text-gray-900 transition">Promo</a>
@@ -32,11 +32,11 @@
 
     <!-- Menu Tampilan Mobile -->
     <div x-show="open" x-cloak class="md:hidden bg-white border-t border-gray-100 py-3 space-y-1 font-medium tracking-wide uppercase" @click.away="open = false">
-        <a href="{{ url('/toyota') }}" class="block px-4 py-2.5 {{ Request::is('toyota') ? 'bg-red-50 text-red-600 font-bold' : 'text-gray-600' }}">Toyota</a>
+        <a href="<?php echo e(url('/toyota')); ?>" class="block px-4 py-2.5 <?php echo e(Request::is('toyota') ? 'bg-red-50 text-red-600 font-bold' : 'text-gray-600'); ?>">Toyota</a>
         <a href="#tentang-kami" @click="open = false" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50">Tentang Kami</a>
         <a href="#produk" @click="open = false" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50">Produk</a>
         <a href="#promo" @click="open = false" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50">Promo</a>
         <a href="#faq" @click="open = false" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50">FAQ</a>
         <a href="#kontak" @click="open = false" class="block mx-4 my-2 text-center bg-zinc-900 text-white py-2 rounded">Kontak</a>
     </div>
-</nav>
+</nav><?php /**PATH C:\laragon\www\proyek-toyota\resources\views/partials/navbar.blade.php ENDPATH**/ ?>
